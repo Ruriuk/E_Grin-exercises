@@ -1,8 +1,4 @@
-const n = 30;
-const m = 40;
+//Parašykite JavaScript programą, kuri gauna atsitiktinius elementus iš masyvo.
+let masyvas = [1, 2, 3, 4, 5, 6];
 
-for (let skaicius = n; skaicius <= m; skaicius++) {
-    if (skaicius % 3 === 0 && skaicius % 10 !== 3) {
-        console.log(skaicius);
-    }
-}
+console.log(masyvas[Math.floor(Math.random() * masyvas.length)]);

@@ -1,14 +1,15 @@
-let ląstelės = 1;
+let ivestis = "HeLlo WoRld!";
+let pakeistaEilute = [];
 
-const laikoIntervalas = 3;
+for (let i = 0; i < ivestis.length; i++) {
+  let simbolis = ivestis[i];
 
-const laikoTarpai = [3, 6, 9, 12, 15, 18, 21, 24];
-
-for (let laikas = 0; laikas <= 24; laikas++) {
-    if (laikoTarpai.includes(laikas)) {
-        console.log(`Po ${laikas} valandų bus ${ląstelės} ląstelės.`);
-    }
-    if (laikas % laikoIntervalas === 0) {
-        ląstelės *= 2;
-    }
+  if (simbolis === simbolis.toLowerCase()) {
+    pakeistaEilute.push(simbolis.toUpperCase());
+  } else {
+    pakeistaEilute.push(simbolis.toLowerCase());
+  }
 }
+
+let rezultatas = pakeistaEilute.join('');
+console.log(rezultatas);

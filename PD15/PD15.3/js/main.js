@@ -1,18 +1,5 @@
-const atlyginimai = [824.25, 1225.12, 459.16, 1500];
+let array = [1 ,2 ,3 ,4 ,5]
 
-function naujasAtlyginimas(esamasAtlyginimas) {
-    if (esamasAtlyginimas > 1000) {
-        return (esamasAtlyginimas * 1.05).toFixed(2);
-    } else {
-        return (esamasAtlyginimas * 1.1).toFixed(2);
-    }
-}
+let last = array[array.length - 1];
 
-const naujiAtlyginimai = [];
-
-for (let i = 0; i < atlyginimai.length; i++) {
-    naujiAtlyginimai.push(naujasAtlyginimas(atlyginimai[i]));
-}
-
-console.log("Atlyginimas iki:", atlyginimai.join(", "));
-console.log("Atlyginimas po:", naujiAtlyginimai.join(", "));
+console.log(last);

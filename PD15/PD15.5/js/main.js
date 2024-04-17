@@ -1,12 +1,4 @@
-const n = 1997;
-const m = 2018;
+const numbers = [40, 100, 1, 5, 25, 10];
+numbers.sort(function(a, b){return a - b});
 
-function arKeliamiejiMetai(metai) {
-    return (metai % 4 === 0 && metai % 100 !== 0) || metai % 400 === 0;
-}
-
-for (let metai = n; metai <= m; metai++) {
-    if (arKeliamiejiMetai(metai)) {
-        console.log(metai);
-    }
-}
+console.log(numbers)

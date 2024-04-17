@@ -1,11 +1,8 @@
-const s1 = 222;
-const s2 = 245;
+//Parašykite JavaScript programą, kuri pašalina nurodytą elementą iš masyvo.
+const masyvas = [1, 2, 3, 4, 5];
 
-for (let bilietas = s1; bilietas <= s2; bilietas++) {
-    if (bilietas % 3 === 0) {
-        const bilietoTekstas = bilietas.toString();
-        if (bilietoTekstas.includes('3') || bilietoTekstas.includes('6') || bilietoTekstas.includes('9')) {
-            console.log(bilietas);
-        }
-    }
-}
+
+
+console.log(masyvas.splice(1, 1));
+
+console.log(masyvas);

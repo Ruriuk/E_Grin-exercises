@@ -1,11 +1,7 @@
-const a = 96;
-const z = 103; 
+let masyvas1 = [1, 2, 3, 4, 5];
+let masyvas2 = [3, 4, 5, 6, 7];
 
-let k = 0; 
+let BendrasMasyvas = masyvas1.concat(masyvas2);
+let result = BendrasMasyvas.splice(number => !masyvas1.includes(number));
 
-for (let numeris = a; numeris <= z; numeris++) {
-    const numerioTekstas = numeris.toString();
-    k += numerioTekstas.length;
-}
-
-console.log(`k = ${k}`);
+console.log(result);

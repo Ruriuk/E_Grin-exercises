@@ -1,11 +1,4 @@
-let i = 0;
-while (i <= 10) {
-    let j = 0;
-    let eilute = '';
-    while (j <= 10) {
-        eilute += `${i * j}\t`;
-        j++;
-    }
-    console.log(eilute);
-    i++;
-}
+let Array = [ "q", "w", "w", "w", "e", "i", "i", "u", "r"];
+let findDuplicates = arr => arr.filter((item, index) => arr.indexOf(item) !== index)
+
+console.log(findDuplicates(Array))
