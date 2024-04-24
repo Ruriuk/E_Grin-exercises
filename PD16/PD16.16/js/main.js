@@ -1,25 +1,24 @@
-function arTobulasis(skaičius) {
-    if (skaičius <= 1) {
-      return false; 
+function arTobulas(sk) {
+    if (sk < 1) {
+      return false; // Neigiami skaičiai ir nulis nėra tobulieji
     }
   
-    let dalikliaiSuma = 1; 
+    var sumaDalikliu = 0;
   
-    for (let daliklis = 2; daliklis <= Math.sqrt(skaičius); daliklis++) {
-      if (skaičius % daliklis === 0) {
-        dalikliaiSuma += daliklis;
-        let kitiDalikliai = skaičius / daliklis;
-        if (daliklis !== kitiDalikliai) {
-          dalikliaiSuma += kitiDalikliai;
-        }
+    for (var daliklis = 1; daliklis <= sk / 2; daliklis++) {
+      if (sk % daliklis === 0) {
+        sumaDalikliu += daliklis;
       }
     }
   
-    return dalikliaiSuma === skaičius;
+    return sumaDalikliu === sk;
   }
   
-  let skaicius1 = 28;
-  let skaicius2 = 12;
+  var skaicius = 28;
   
-  console.log(skaicius1 + (arTobulasis(skaicius1) ? " yra tobulasis skaičius." : " nėra tobulasis skaičius."));
-  console.log(skaicius2 + (arTobulasis(skaicius2) ? " yra tobulasis skaičius." : " nėra tobulasis skaičius."));
+  if (arTobulas(skaicius)) {
+    console.log(skaicius + " yra tobulasis skaičius.");
+  } else {
+    console.log(skaicius + " nėra tobulasis skaičius.");
+  }
+  
