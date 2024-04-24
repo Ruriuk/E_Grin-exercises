@@ -1,16 +1,22 @@
-function trikampioPlotas(a, b, c) {
-
-    let s = (a + b + c) / 2;
-    
-    let plotas = Math.sqrt(s * (s - a) * (s - b) * (s - c));
-    
-    return plotas;
+function antrasMaziausiasDidziausias(masyvas) {
+    if (masyvas.length < 2) {
+      console.log("Masyve turi būti bent du skaičiai.");
+      return;
+    }
+  
+    masyvas.sort(function(a, b) {
+      return a - b;
+    });
+  
+    var antrasMaziausias = masyvas[1];
+    var antrasDidziausias = masyvas[masyvas.length - 2];
+  
+    return { antrasMaziausias, antrasDidziausias };
   }
   
+  var skaiciai = [5, 2, 8, 1, 9, 3];
+  var rezultatai = antrasMaziausiasDidziausias(skaiciai);
   
-  let A = 5;
-  let B = 6;
-  let C = 7;
-  
-  let plotas = trikampioPlotas(A, B, C);
-  console.log("Plotas: ", plotas);
+  console.log("Skaiciai:", skaiciai);
+  console.log("Antras maziausias:", rezultatai.antrasMaziausias);
+  console.log("Antras didziausias:", rezultatai.antrasDidziausias);
