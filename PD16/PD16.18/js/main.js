@@ -1,30 +1,26 @@
 function pirmasNepasikartojantisSimbolis(eilute) {
-    let simboliuDaiktas = {};
+    var simboliuSkaicius = {};
   
-    for (let i = 0; i < eilute.length; i++) {
-      let simbolis = eilute[i];
+    for (var i = 0; i < eilute.length; i++) {
+      var simbolis = eilute[i];
+      simboliuSkaicius[simbolis] = (simboliuSkaicius[simbolis] || 0) + 1;
+    }
   
-      if (!simboliuDaiktas[simbolis]) {
-        simboliuDaiktas[simbolis] = 1;
-      } else {
-        simboliuDaiktas[simbolis]++;
+    for (var j = 0; j < eilute.length; j++) {
+      var tikrinamasSimbolis = eilute[j];
+      if (simboliuSkaicius[tikrinamasSimbolis] === 1) {
+        return tikrinamasSimbolis;
       }
     }
   
-    for (let j = 0; j < eilute.length; j++) {
-      if (simboliuDaiktas[eilute[j]] === 1) {
-        return eilute[j];
-      }
-    }
+    return null; 
   
-    return null;
-  }
+  var eilute = "programavimas";
+  var nepasikartojantisSimbolis = pirmasNepasikartojantisSimbolis(eilute);
   
-  let eilute = "programavimas";
-  let nepasikartojantis = pirmasNepasikartojantisSimbolis(eilute);
-  
-  if (nepasikartojantis !== null) {
-    console.log("Pirmasis nepasikartojantis simbolis:", nepasikartojantis);
+  if (nepasikartojantisSimbolis !== null) {
+    console.log("Pirmas nepasikartojantis simbolis:", nepasikartojantisSimbolis);
   } else {
-    console.log("Eiluteje nera nepasikartojanciu simboliu.");
+    console.log("Eilutėje nėra nepasikartojančių simbolių.");
   }
+  
